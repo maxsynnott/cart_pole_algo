@@ -1,5 +1,5 @@
 import gym
-from statistics import mean
+import numpy as np
 
 env = gym.make("CartPole-v1")
 
@@ -26,6 +26,4 @@ for _ in range(1000):
 
   totals.append(episode_rewards)
 
-print(mean(totals))
-
-env.close()
+print(np.mean(totals))
